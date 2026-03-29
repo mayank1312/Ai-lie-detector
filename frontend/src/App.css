@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ededed;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+.app-layout {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.topbar {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.panel-header {
+  margin-bottom: 16px;
+}
+
+.panel-header h2 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin: 0;
+  font-weight: 500;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+  padding-bottom: 16px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 4px 4px 4px 12px;
+  transition: border-color 0.2s;
+}
+
+.input-group:focus-within {
+  border-color: #555;
+}
+
+.input-icon {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.text-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 8px 0;
+}
+
+.text-input::placeholder {
+  color: #555;
+}
+
+.primary-btn {
+  background: #ededed;
+  color: #0a0a0a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background: #fff;
+}
+
+.primary-btn:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+  background: #1a1a1a;
+  color: #555;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.active-truth {
+  background: #022c22;
+  color: #34d399;
+  border-color: #059669;
+}
+
+.active-lie {
+  background: #450a0a;
+  color: #f87171;
+  border-color: #dc2626;
+}
+
+.processing {
+  animation: pulse-border 1.5s infinite;
+}
+
+@keyframes pulse-border {
+  0% { border-color: #333; color: #555; }
+  50% { border-color: #888; color: #aaa; }
+  100% { border-color: #333; color: #555; }
+}
+
+.result-data {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.data-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.data-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.data-value {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.statement-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #fff;
+  background: #1a1a1a;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #2a2a2a;
+  margin-top: 4px;
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-true {
+  background: #022c22;
+  color: #34d399;
+  border: 1px solid #059669;
+}
+
+.badge-false {
+  background: #450a0a;
+  color: #f87171;
+  border: 1px solid #dc2626;
+}
+/* BULBS */
+.bulb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1e293b;
+  transition: all 0.3s ease;
+}
+
+.bulb-blue {
+  border: 2px solid #3b82f6;
+}
+
+.bulb-red {
+  border: 2px solid #ef4444;
+}
+
+/* ACTIVE GLOW */
+.glow-blue {
+  background: #3b82f6;
+  box-shadow: 0 0 12px #3b82f6, 0 0 25px #3b82f6;
+}
+
+.glow-red {
+  background: #ef4444;
+  box-shadow: 0 0 12px #ef4444, 0 0 25px #ef4444;
+}
+
+/* LOADING PULSE */
+.bulb-pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.4; transform: scale(1); }
+}
+
+/* LOADING TEXT */
+.loading-text {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #64748b;
+  text-align: center;
+}
