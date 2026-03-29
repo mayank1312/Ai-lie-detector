@@ -220,4 +220,4 @@ Response:
 
 ## License
 
-This project is for educational and research purposes.
+This project is made by Mayank Dhingra.
